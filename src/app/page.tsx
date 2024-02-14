@@ -1,5 +1,5 @@
 import styles from './page.module.scss';
-import Weather_App from '@/Weather_App';
+import Weather_App from './Weather_App';
 
 export default function Home() {
   return (
