@@ -4,14 +4,22 @@ import Image from 'next/image';
 import daySvg from '../../../public/day.svg';
 
 const Weather_App = () => {
-  const [userLatitude, setUserLatitude] = useState([]);
-  const [userLongitude, setUserLongitude] = useState([]);
-  const [weatherCode, setWeatherCode] = useState([]);
+  const [userLatitude, setUserLatitude] = useState<number>();
+  const [userLongitude, setUserLongitude] = useState<number>();
+  const [weatherCode, setWeatherCode] = useState();
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
+    const getLocation = navigator.geolocation.getCurrentPosition(position => {
+      const lat = position.coords.latitude;
       console.log('Latitude is :', position.coords.latitude);
+
+      const long = position.coords.longitude;
       console.log('Longitude is :', position.coords.longitude);
+
+      setUserLatitude(lat);
+      console.log('userLat is :', userLatitude);
+      setUserLongitude(long);
+      console.log('userLong is :', userLongitude);
     });
   });
 
