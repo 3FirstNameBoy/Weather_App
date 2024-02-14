@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import daySvg from '../../../public/day.svg';
+import WeatherCard from './WeatherCard/WeatherCard';
 
 const Weather_App = () => {
   const [userLatitude, setUserLatitude] = useState<number>(0);
@@ -11,15 +10,15 @@ const Weather_App = () => {
   useEffect(() => {
     const getLocation = navigator.geolocation.getCurrentPosition(position => {
       const lat = position.coords.latitude;
-      console.log('Latitude is :', position.coords.latitude);
+      // console.log('Latitude is :', position.coords.latitude);
 
       const long = position.coords.longitude;
-      console.log('Longitude is :', position.coords.longitude);
+      // console.log('Longitude is :', position.coords.longitude);
 
       setUserLatitude(lat);
-      console.log('userLat is :', userLatitude);
+      // console.log('userLat is :', userLatitude);
       setUserLongitude(long);
-      console.log('userLong is :', userLongitude);
+      // console.log('userLong is :', userLongitude);
     });
   });
 
@@ -35,23 +34,9 @@ const Weather_App = () => {
     getWeather();
   }, []);
 
-  const SunSvg = () => {
-    return (
-      <div>
-        <Image
-          src={daySvg}
-          alt="My SVG"
-          width={200}
-          height={200}
-        />
-      </div>
-    );
-  };
-
   return (
     <div>
-      <p>Weather_App</p>
-      <SunSvg />
+      <WeatherCard />
     </div>
   );
 };
