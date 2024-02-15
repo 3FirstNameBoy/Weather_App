@@ -45,3 +45,53 @@ const CloudyDayOneSvg = () => {
     />
   );
 };
+const CloudyDayTwoSvg = () => {
+  return (
+    <Image
+      src={cloudyDay_2_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const CloudyDayThreeSvg = () => {
+  return (
+    <Image
+      src={cloudyDay_3_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const CloudyNightOneSvg = () => {
+  return (
+    <Image
+      src={cloudyNight_1_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const CloudyNightTwoSvg = () => {
+  return (
+    <Image
+      src={cloudyNight_2_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const CloudyNightThreeSvg = () => {
+  return (
+    <Image
+      src={cloudyNight_3_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
