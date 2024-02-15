@@ -185,3 +185,63 @@ const RainySevenSvg = () => {
     />
   );
 };
+const SnowyOneSvg = () => {
+  return (
+    <Image
+      src={snowy_1_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const SnowyTwoSvg = () => {
+  return (
+    <Image
+      src={snowy_2_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const SnowyThreeSvg = () => {
+  return (
+    <Image
+      src={snowy_3_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const SnowyFourSvg = () => {
+  return (
+    <Image
+      src={snowy_4_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const SnowyFiveSvg = () => {
+  return (
+    <Image
+      src={snowy_5_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const SnowySixSvg = () => {
+  return (
+    <Image
+      src={snowy_6_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
