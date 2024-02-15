@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './WeatherCard.module.scss';
-import Image from 'next/image';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import { RainyOneSvg } from '../WeatherSvgs/WeatherSvgs';
 
 const WeatherCard = () => {
