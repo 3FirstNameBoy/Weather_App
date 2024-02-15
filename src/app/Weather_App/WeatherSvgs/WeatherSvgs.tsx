@@ -95,3 +95,93 @@ const CloudyNightThreeSvg = () => {
     />
   );
 };
+const CloudySvg = () => {
+  return (
+    <Image
+      src={cloudy_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const NightSvg = () => {
+  return (
+    <Image
+      src={night_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const RainyOneSvg = () => {
+  return (
+    <Image
+      src={rainy_1_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const RainyTwoSvg = () => {
+  return (
+    <Image
+      src={rainy_2_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const RainyThreeSvg = () => {
+  return (
+    <Image
+      src={rainy_3_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const RainyFourSvg = () => {
+  return (
+    <Image
+      src={rainy_4_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const RainyFiveSvg = () => {
+  return (
+    <Image
+      src={rainy_5_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const RainySixSvg = () => {
+  return (
+    <Image
+      src={rainy_6_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+const RainySevenSvg = () => {
+  return (
+    <Image
+      src={rainy_7_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
