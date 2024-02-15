@@ -24,7 +24,7 @@ import snowy_5_Svg from '../../../../public/snowy-5.svg';
 import snowy_6_Svg from '../../../../public/snowy-6.svg';
 import thunder_Svg from '../../../../public/thunder.svg';
 
-const DaySvg = () => {
+export const DaySvg = () => {
   return (
     <Image
       src={day_Svg}
@@ -35,7 +35,7 @@ const DaySvg = () => {
   );
 };
 
-const CloudyDayOneSvg = () => {
+export const CloudyDayOneSvg = () => {
   return (
     <Image
       src={cloudyDay_1_Svg}
@@ -45,7 +45,8 @@ const CloudyDayOneSvg = () => {
     />
   );
 };
-const CloudyDayTwoSvg = () => {
+
+export const CloudyDayTwoSvg = () => {
   return (
     <Image
       src={cloudyDay_2_Svg}
@@ -55,7 +56,8 @@ const CloudyDayTwoSvg = () => {
     />
   );
 };
-const CloudyDayThreeSvg = () => {
+
+export const CloudyDayThreeSvg = () => {
   return (
     <Image
       src={cloudyDay_3_Svg}
@@ -65,7 +67,8 @@ const CloudyDayThreeSvg = () => {
     />
   );
 };
-const CloudyNightOneSvg = () => {
+
+export const CloudyNightOneSvg = () => {
   return (
     <Image
       src={cloudyNight_1_Svg}
@@ -75,7 +78,8 @@ const CloudyNightOneSvg = () => {
     />
   );
 };
-const CloudyNightTwoSvg = () => {
+
+export const CloudyNightTwoSvg = () => {
   return (
     <Image
       src={cloudyNight_2_Svg}
@@ -85,7 +89,8 @@ const CloudyNightTwoSvg = () => {
     />
   );
 };
-const CloudyNightThreeSvg = () => {
+
+export const CloudyNightThreeSvg = () => {
   return (
     <Image
       src={cloudyNight_3_Svg}
@@ -95,7 +100,8 @@ const CloudyNightThreeSvg = () => {
     />
   );
 };
-const CloudySvg = () => {
+
+export const CloudySvg = () => {
   return (
     <Image
       src={cloudy_Svg}
@@ -105,7 +111,8 @@ const CloudySvg = () => {
     />
   );
 };
-const NightSvg = () => {
+
+export const NightSvg = () => {
   return (
     <Image
       src={night_Svg}
@@ -115,7 +122,8 @@ const NightSvg = () => {
     />
   );
 };
-const RainyOneSvg = () => {
+
+export const RainyOneSvg = () => {
   return (
     <Image
       src={rainy_1_Svg}
@@ -125,7 +133,8 @@ const RainyOneSvg = () => {
     />
   );
 };
-const RainyTwoSvg = () => {
+
+export const RainyTwoSvg = () => {
   return (
     <Image
       src={rainy_2_Svg}
@@ -135,7 +144,8 @@ const RainyTwoSvg = () => {
     />
   );
 };
-const RainyThreeSvg = () => {
+
+export const RainyThreeSvg = () => {
   return (
     <Image
       src={rainy_3_Svg}
@@ -145,7 +155,8 @@ const RainyThreeSvg = () => {
     />
   );
 };
-const RainyFourSvg = () => {
+
+export const RainyFourSvg = () => {
   return (
     <Image
       src={rainy_4_Svg}
@@ -155,7 +166,8 @@ const RainyFourSvg = () => {
     />
   );
 };
-const RainyFiveSvg = () => {
+
+export const RainyFiveSvg = () => {
   return (
     <Image
       src={rainy_5_Svg}
@@ -165,7 +177,8 @@ const RainyFiveSvg = () => {
     />
   );
 };
-const RainySixSvg = () => {
+
+export const RainySixSvg = () => {
   return (
     <Image
       src={rainy_6_Svg}
@@ -175,7 +188,8 @@ const RainySixSvg = () => {
     />
   );
 };
-const RainySevenSvg = () => {
+
+export const RainySevenSvg = () => {
   return (
     <Image
       src={rainy_7_Svg}
@@ -185,7 +199,8 @@ const RainySevenSvg = () => {
     />
   );
 };
-const SnowyOneSvg = () => {
+
+export const SnowyOneSvg = () => {
   return (
     <Image
       src={snowy_1_Svg}
@@ -195,7 +210,8 @@ const SnowyOneSvg = () => {
     />
   );
 };
-const SnowyTwoSvg = () => {
+
+export const SnowyTwoSvg = () => {
   return (
     <Image
       src={snowy_2_Svg}
@@ -205,7 +221,8 @@ const SnowyTwoSvg = () => {
     />
   );
 };
-const SnowyThreeSvg = () => {
+
+export const SnowyThreeSvg = () => {
   return (
     <Image
       src={snowy_3_Svg}
@@ -215,7 +232,8 @@ const SnowyThreeSvg = () => {
     />
   );
 };
-const SnowyFourSvg = () => {
+
+export const SnowyFourSvg = () => {
   return (
     <Image
       src={snowy_4_Svg}
@@ -225,7 +243,8 @@ const SnowyFourSvg = () => {
     />
   );
 };
-const SnowyFiveSvg = () => {
+
+export const SnowyFiveSvg = () => {
   return (
     <Image
       src={snowy_5_Svg}
@@ -235,10 +254,22 @@ const SnowyFiveSvg = () => {
     />
   );
 };
-const SnowySixSvg = () => {
+
+export const SnowySixSvg = () => {
   return (
     <Image
       src={snowy_6_Svg}
+      alt="My SVG"
+      width={200}
+      height={200}
+    />
+  );
+};
+
+export const ThunderSvg = () => {
+  return (
+    <Image
+      src={thunder_Svg}
       alt="My SVG"
       width={200}
       height={200}
