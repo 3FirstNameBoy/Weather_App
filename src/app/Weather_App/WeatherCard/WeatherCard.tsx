@@ -6,15 +6,20 @@ import Row from 'react-bootstrap/Row';
 import { RainyOneSvg } from '../WeatherSvgs/WeatherSvgs';
 
 const WeatherCard = () => {
+
   return (
-    <div className={styles.currentWeatherDiv}>
-      <RainyOneSvg />
-      <h1>Current Location</h1>
-      <p>day of the week</p>
-      <p>date</p>
-      <p>temperature</p>
-      <p>weather type</p>
-    </div>
+    <Container>
+      <Row>
+        <div className={styles.currentWeatherDiv}>
+          <RainyOneSvg />
+          <h1>Current Location</h1>
+          <p>day of the week</p>
+          <p>date</p>
+          <p>temperature</p>
+          <p>weather type</p>
+        </div>
+      </Row>
+    </Container>
   );
 };
 

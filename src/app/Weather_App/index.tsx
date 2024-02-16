@@ -9,28 +9,24 @@ const Weather_App = () => {
 
   useEffect(() => {
     const getLocation = navigator.geolocation.getCurrentPosition(position => {
-      const lat = position.coords.latitude;
-      // console.log('Latitude is :', position.coords.latitude);
+      let lat = position.coords.latitude;
 
-      const long = position.coords.longitude;
-      // console.log('Longitude is :', position.coords.longitude);
+      let long = position.coords.longitude;
 
-      setUserLatitude(lat);
-      // console.log('userLat is :', userLatitude);
-      setUserLongitude(long);
-      // console.log('userLong is :', userLongitude);
+      // setUserLatitude(lat);
+      // setUserLongitude(long);
+      return { lat, long };
     });
-  });
 
-  useEffect(() => {
-    const getWeather = async () => {
+    const getWeather = async ({ lat, long }) => {
       const query = await fetch(
-        'https://api.open-meteo.com/v1/forecast?latitude=35.9606&longitude=-83.9207&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch'
+        `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
       );
       const response = await query.json();
       console.log('response: ', response);
       setWeather(response);
     };
+
     getWeather();
   }, []);
 
