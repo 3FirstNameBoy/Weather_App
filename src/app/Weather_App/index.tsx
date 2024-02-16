@@ -5,16 +5,18 @@ import WeatherCard from './WeatherCard/WeatherCard';
 const Weather_App = () => {
   const [userLatitude, setUserLatitude] = useState<number>(0);
   const [userLongitude, setUserLongitude] = useState<number>(0);
-  const [weather, setWeather] = useState();
+  const [weather, setWeather] = useState({});
 
   useEffect(() => {
     let lat: number = 0;
     let long: number = 0;
+
     const getLocation = () => {
       navigator.geolocation.getCurrentPosition(position => {
         lat = position.coords.latitude;
 
         long = position.coords.longitude;
+        console.log(lat, long);
       });
     };
     getLocation();
@@ -33,11 +35,7 @@ const Weather_App = () => {
 
   console.log(weather);
 
-  return (
-    <div>
-      <WeatherCard />
-    </div>
-  );
+  return <WeatherCard weather={weather} />;
 };
 
 export default Weather_App;
