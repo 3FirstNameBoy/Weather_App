@@ -8,27 +8,30 @@ const Weather_App = () => {
   const [weather, setWeather] = useState();
 
   useEffect(() => {
-    const getLocation = navigator.geolocation.getCurrentPosition(position => {
-      let lat = position.coords.latitude;
+    let lat: number = 0;
+    let long: number = 0;
+    const getLocation = () => {
+      navigator.geolocation.getCurrentPosition(position => {
+        lat = position.coords.latitude;
 
-      let long = position.coords.longitude;
+        long = position.coords.longitude;
+      });
+    };
+    getLocation();
 
-      // setUserLatitude(lat);
-      // setUserLongitude(long);
-      return { lat, long };
-    });
-
-    const getWeather = async ({ lat, long }) => {
+    const getWeather = async (lat: number, long: number) => {
       const query = await fetch(
         `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch`
       );
       const response = await query.json();
-      console.log('response: ', response);
+
       setWeather(response);
     };
 
-    getWeather();
+    getWeather(lat, long);
   }, []);
+
+  console.log(weather);
 
   return (
     <div>
