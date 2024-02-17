@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import WeatherCard from './WeatherCard/WeatherCard';
-import styles from './index.module.scss';
+
 import { Row, Col, Navbar, Form, Button } from 'react-bootstrap';
 
 const Weather_App = () => {
@@ -14,13 +14,14 @@ const Weather_App = () => {
       navigator.geolocation.getCurrentPosition(
         position => {
           setUserLatitude(position.coords.latitude);
+          console.log(position.coords.latitude);
           setUserLongitude(position.coords.longitude);
+          console.log('user Lat: ', userLatitude, 'user Long: ', userLongitude);
         },
         error => {
           console.log(error);
         }
       );
-      console.log('user Lat: ', userLatitude, 'user Long: ', userLongitude);
     };
 
     const getWeather = async () => {
@@ -35,11 +36,7 @@ const Weather_App = () => {
     getWeather();
   }, []);
 
-  return (
-    <div className={styles.body}>
-      <WeatherCard weather={weather} />
-    </div>
-  );
+  return <WeatherCard weather={weather} />;
 };
 
 export default Weather_App;

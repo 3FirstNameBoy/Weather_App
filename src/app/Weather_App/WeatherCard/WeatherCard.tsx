@@ -6,7 +6,7 @@ import { RainyOneSvg } from '../WeatherSvg/WeatherSvg';
 const WeatherCard = (weather: object) => {
   return (
     <Container className={styles.weatherContainer}>
-      <Row className={styles.weatherCardDiv}>
+      <Row>
         {/* <Row>
           <RainyOneSvg />
         </Row>
