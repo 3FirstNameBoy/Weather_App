@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import WeatherCard from './WeatherCard/WeatherCard';
+import styles from './index.module.scss';
+import { Row, Col, Navbar, Form, Button } from 'react-bootstrap';
 
 const Weather_App = () => {
   const [userLatitude, setUserLatitude] = useState<number>(0);
@@ -33,9 +35,11 @@ const Weather_App = () => {
     getWeather();
   }, []);
 
-  console.log(weather);
-
-  return <WeatherCard weather={weather} />;
+  return (
+    <div className={styles.body}>
+      <WeatherCard weather={weather} />
+    </div>
+  );
 };
 
 export default Weather_App;

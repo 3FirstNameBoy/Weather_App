@@ -1,15 +1,13 @@
 import React from 'react';
 import styles from './WeatherCard.module.scss';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import { RainyOneSvg } from '../WeatherSvgs/WeatherSvgs';
+import { Container, Col, Row, Card } from 'react-bootstrap';
+import { RainyOneSvg } from '../WeatherSvg/WeatherSvg';
 
 const WeatherCard = (weather: object) => {
   return (
     <Container className={styles.weatherContainer}>
-      <Col className={styles.weatherCardDiv}>
-        <Row>
+      <Row className={styles.weatherCardDiv}>
+        {/* <Row>
           <RainyOneSvg />
         </Row>
         <Row>
@@ -18,8 +16,24 @@ const WeatherCard = (weather: object) => {
           <p>date</p>
           <p>temperature</p>
           <p>weather type</p>
-        </Row>
-      </Col>
+        </Row> */}
+        <Col>
+          <RainyOneSvg />
+        </Col>
+        <Col>
+          <Card style={{ width: '18rem' }}>
+            <Card.Body>
+              <Card.Title>Today</Card.Title>
+              <br></br>
+              <Card.Text>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </Container>
   );
 };
