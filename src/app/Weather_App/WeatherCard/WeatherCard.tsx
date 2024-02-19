@@ -3,7 +3,7 @@ import styles from './WeatherCard.module.scss';
 import { Container, Col, Row, Card } from 'react-bootstrap';
 import { RainyOneSvg } from '../WeatherSvg/WeatherSvg';
 
-const WeatherCard = (weather: object) => {
+const WeatherCard = (weather: any) => {
   return (
     <Container className={styles.weatherContainer}>
       <Row>
