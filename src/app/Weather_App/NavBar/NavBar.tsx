@@ -1,20 +1,43 @@
 'use client';
 import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import {
+  Navbar,
+  Container,
+  Nav,
+  Form,
+  Button,
+  Col,
+  Row,
+} from 'react-bootstrap';
+import styles from './NavBar.module.scss';
+
 const NavBar = () => {
   return (
     <Navbar
       bg="primary"
       data-bs-theme="dark"
+      className={styles.navbarBody}
     >
-      <Container>
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-      </Container>
+      <Navbar.Brand href="#home">Weather App</Navbar.Brand>
+      <Nav>
+        <Row>
+          <Col xs="auto">
+            <Form.Control
+              type="text"
+              placeholder="Search"
+              className=" mr-sm-2"
+            />
+          </Col>
+          <Col xs="auto">
+            <Button
+              type="submit"
+              className={styles.navbarButton}
+            >
+              Submit
+            </Button>
+          </Col>
+        </Row>
+      </Nav>
     </Navbar>
   );
 };
