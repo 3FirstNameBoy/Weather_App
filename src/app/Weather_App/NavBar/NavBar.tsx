@@ -1,14 +1,6 @@
 'use client';
 import React from 'react';
-import {
-  Navbar,
-  Container,
-  Nav,
-  Form,
-  Button,
-  Col,
-  Row,
-} from 'react-bootstrap';
+import { Navbar, Nav, Form, Button, Col, Row } from 'react-bootstrap';
 import styles from './NavBar.module.scss';
 
 const NavBar = () => {
@@ -24,7 +16,7 @@ const NavBar = () => {
           <Col xs="auto">
             <Form.Control
               type="text"
-              placeholder="Search"
+              placeholder="Location"
               className=" mr-sm-2"
             />
           </Col>
@@ -33,7 +25,7 @@ const NavBar = () => {
               type="submit"
               className={styles.navbarButton}
             >
-              Submit
+              Search
             </Button>
           </Col>
         </Row>
