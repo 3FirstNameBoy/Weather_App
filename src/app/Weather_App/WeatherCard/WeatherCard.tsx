@@ -7,16 +7,6 @@ const WeatherCard = (weather: any) => {
   return (
     <Container className={styles.weatherContainer}>
       <Row>
-        {/* <Row>
-          <RainyOneSvg />
-        </Row>
-        <Row>
-          <h1>Current Location</h1>
-          <p>day of the week</p>
-          <p>date</p>
-          <p>temperature</p>
-          <p>weather type</p>
-        </Row> */}
         <Col>
           <RainyOneSvg />
         </Col>
@@ -26,10 +16,10 @@ const WeatherCard = (weather: any) => {
               <Card.Title>Today</Card.Title>
               <br></br>
               <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                <h1>Temperature</h1>
               </Card.Text>
+              <Card.Text>Weather type</Card.Text>
+              <Card.Text>Time</Card.Text>
             </Card.Body>
           </Card>
         </Col>
