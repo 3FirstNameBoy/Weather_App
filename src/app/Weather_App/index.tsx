@@ -69,7 +69,3 @@ const Weather_App = () => {
 };
 
 export default Weather_App;
-//////idea for new app contacts
-////need to setup new weather api
-////fix form
-////clean up format
